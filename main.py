@@ -1,5 +1,4 @@
-def to_words(text):
-    return text.split()
+from stats import get_num_words
 
 def get_book_text(filepath):
     with open(filepath) as f:
@@ -8,7 +7,7 @@ def get_book_text(filepath):
 
 def main():
     text = get_book_text("books/frankenstein.txt")
-    length = len(to_words(text))
+    length = len(get_num_words(text))
     print(f"{length} words found in the document")
 
 main()
